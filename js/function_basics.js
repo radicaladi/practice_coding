@@ -215,15 +215,25 @@ function notZero(number) {
 console.log(notZero(3));
 
 //Write a function named lowerCase(string)
+
 //Write a function named double(n) that returns a number times two
+
 //Write a function named triple(n) that returns a number times 3
+
 //Write a function named quadruple(n) that returns a number times 4
+
 //Write a function named half(n) that returns 1/2 of the provided input
+
 //Write a function named subtract(a, b) that returns a minus b
+
 //Write a function named multiply(a, b) that returns the product of a times b
+
 //Write a function named divide(a, b) that returns a divided by ~b~
+
 //Write a function named remainder(a, b) that returns the remainder after dividing a by b
+
 //Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+
 //Write a function named cube(n) that returns n * n * n
 //Write a function named squareRoot(n) that returns the square root of the input
 //Write a function named cubeRoot(n) that returns the cube root of the input
