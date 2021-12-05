@@ -115,32 +115,105 @@ console.log(isFalse(0));
 
 //Make a function named isTruthy(input), remember that values other than true will behave like true
 
+function isTruthy(input){
+    if (input === false){
+        return true;
+    } else
+        return true;
+}
+
+console.log(isTruthy(NaN));
 
 //Make a function named isFalsy(input), remember that values other than false behave like false
 
+function isFalsey(input){
+    if (input === true){
+        return false;
+    } else
+        return true;
+}
+
+console.log(isFalsey(NaN));
 
 //Make a function named isVowel(letter)
 
+function isVowel(letter) {
+    var result;
+    result = letter == "A" || letter == "E" || letter == "I" || letter == "O" || letter == "U";
+
+    return result;
+}
+
+console.log(isVowel('A'));;
 
 //Make a function named isConsonant(letter)
 
+function isConsonant(letter) {
+        return !isVowel(letter);
+    }
+
+console.log(isConsonant('A'));
 
 //Make a function named isCapital(letter)
 
+function isCapital(letter){
+    if (letter == letter.toUpperCase()) {
+        return "letter is capital";
+    } else
+        return "not a capital";
+}
+
+console.log(isCapital('a'));
 
 //Make a function named isLowerCase(letter)
 
+function isLowerCase(letter) {
+    if (letter == letter.toLowerCase()) {
+        return "letter is lower case";
+    } else
+        return "is not lower case";
+}
+
+console.log(isLowerCase('B'))
 
 //Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
 
+function hasLowerCase(str) {
+    return str == str.toLowerCase() && str != str.toUpperCase();
+}
+
+console.log(hasLowerCase('andromeda'));
 
 //Make a function named isSpace(letter) that returns if a character is a space character
 
+function isSpace(letter) {
+    return letter === ' ';
+}
+
+console.log(isSpace(' '));
 
 //Make a function named isZero(number)
 
+function isZero(number) {
+    if (number === 0) {
+        return true;
+    } else
+        return false;
+}
+
+console.log(isZero(1));
 
 //Make a function named notZero(input) that returns true if the input is not zero
+
+function notZero(number) {
+    if (number !== 0) {
+        return true;
+    } else
+        return false;
+}
+
+console.log(notZero(3));
+
 //Write a function named lowerCase(string)
 //Write a function named double(n) that returns a number times two
 //Write a function named triple(n) that returns a number times 3
