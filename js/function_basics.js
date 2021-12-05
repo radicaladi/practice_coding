@@ -1,4 +1,4 @@
-/**Function Drills
+/**FUNCTION DRILLS
  */
 
 /** Functions using conditionals but not loops or arrays:
@@ -6,50 +6,140 @@
 
 //Make a function named isOdd(number)
 
+function isOdd(number){
+    if (number % 3 === 0){
+        return number + " is odd."
+    }
+}
+
+console.log(isOdd(9));
+
 //Make a function named isEven(number)
 
+function isEven(number){
+    if (number % 2 === 0){
+        return number + " is even."
+    }
+}
 
+console.log(isEven(8));
 
 //Make a function named identity(input) that returns the input exactly as provided.
 
+function identity(input) {
+    return input;
+}
+
+console.log(identity("Bourne Identity"));
 
 //Make a function named isFive(input)
 
+function isFive(input) {
+    if (input === 5) {
+        return "Spot on."
+    }
+    else if (input !== 5) {
+        return "Swing and a miss.";
+    }
+}
 
+console.log(isFive(5));
 
 //Make a function named addFive(input) that adds five to some input.
 
+function addFive(input) {
+    return input + 5;
+}
 
+console.log(addFive(5));
 
 //Make a function named isMultipleOfFive(input)
 
+function isMultipleOfFive(input) {
+    if (input % 5 === 0) {
+        return input + " is a multiple of five";
+    }
+}
 
+console.log(isMultipleOfFive(25));
 
 //Make a function named isThree(input)
 
+function isThree(input) {
+    if (input === 3){
+        return input + " is three.";
+    }
+    else if (input !== 3) {
+        return input + " is not three.";
+    }
+}
 
+console.log(isThree(6));
 
 //Make a function named isMultipleOfThree(input)
 
+function isMultipleOfThree(input){
+    if (input % 3 === 0) {
+        return input + " is a multiple of three.";
+    } else
+        return input + " is not a multiple of three."
+}
+
+console.log(isMultipleOfThree(11));
 
 //Make a function named isMultipleOfThreeAndFive(input)
 
+function isMultipleOfThreeAndFive(input) {
+    if (input % 3 === 0 && input % 5 === 0){
+        return input + " is a multiple of three and five."
+    }
+}
 
-//Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
-
-
+console.log(isMultipleOfThreeAndFive(15));
 
 //Make a function named isTrue(boolean)
+
+function isTrue(boolean){
+    return true;
+}
+
+console.log(isTrue(100));
+
 //Make a function named isFalse(boolean)
+
+function isFalse(boolean){
+    return false;
+}
+
+console.log(isFalse(0));
+
 //Make a function named isTruthy(input), remember that values other than true will behave like true
+
+
 //Make a function named isFalsy(input), remember that values other than false behave like false
+
+
 //Make a function named isVowel(letter)
+
+
 //Make a function named isConsonant(letter)
+
+
 //Make a function named isCapital(letter)
+
+
 //Make a function named isLowerCase(letter)
+
+
 //Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+
+
 //Make a function named isSpace(letter) that returns if a character is a space character
+
+
 //Make a function named isZero(number)
+
+
 //Make a function named notZero(input) that returns true if the input is not zero
 //Write a function named lowerCase(string)
 //Write a function named double(n) that returns a number times two
