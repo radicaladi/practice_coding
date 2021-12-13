@@ -295,15 +295,101 @@ function modulo(a, b) {
 console.log(modulo(20, 2));
 
 //Write a function named cube(n) that returns n * n * n
+
+function cube(n) {
+    return n ** 3;
+}
+
+console.log(cube(3));
+
 //Write a function named squareRoot(n) that returns the square root of the input
+
+function squareRoot(n) {
+    return Math.sqrt(n);
+}
+
+console.log(squareRoot(64));
+
 //Write a function named cubeRoot(n) that returns the cube root of the input
+
+function cubeRoot(n) {
+    return Math.cbrt(n);
+}
+
+console.log(cubeRoot(8))
+
 //Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+
+function invertSign(number) {
+    if (number > 0) {
+        return -Math.abs(number);
+    } else if (number < 0) {
+        return Math.abs(number);
+    } return false;
+}
+
+console.log(invertSign(7));
+console.log(invertSign(-7));
+console.log(invertSign(0));
+
 //Write a function named degreesToRadians(number)
+
+function degreesToRadians(number) {
+    return number * (Math.PI / 180.0);
+}
+
+console.log(degreesToRadians(180));
+
 //Write a function named radiansToDegrees(number)
+
+function radiansToDegrees(number){
+
+    return number * (180 / Math.PI);
+}
+
+console.log(radiansToDegrees(3.141592653589793));
+
 //Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+
+function isBlank(input) {
+    if (input === " ") {
+        return "is a space";
+    } else if (input === "\n") {
+        return "is new line";
+    } else if (input === "\t") {
+        return "is tabs";
+    } return false;
+}
+
+console.log(isBlank(" "));
+console.log(isBlank("\n"));
+console.log(isBlank("\t"));
+
 //Make a function named trim(string) that removes empty spaces before and after the input.
+
+function trim(string) {
+    return string.trim();
+}
+
+console.log("     what are you talking about?     "); //before trim
+console.log(trim("     what are you talking about?     ")); //after trim
+
 //Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+
+function areEqual(input1, input2) {
+    return input1 == input2;
+}
+
+console.log(areEqual(2, "2"));
+
 //Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+
+function areIdentical(input1, input2) {
+    return input1 === input2;
+}
+
+console.log(areIdentical("dog", "dog"));
+
 //Make a function named not(input) returns the input with a flipped boolean
 //Make a function named notNot(input) that the negation of the negation of the input.
 //Make a function named and(predicate1, predicate2) that returns the logical operation of AND
