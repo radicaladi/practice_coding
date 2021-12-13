@@ -284,7 +284,7 @@ function remainder(a, b) {
     return a % b;
 }
 
-console.log(remainder(20, 2));
+console.log(remainder(42, 10));
 
 //Make a function named modulo(a, b) that returns the remainder after dividing a by b
 
