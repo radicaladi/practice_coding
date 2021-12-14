@@ -7,5 +7,108 @@
 
 <body>
 
+<!--using style instead of a stylesheet for space saving-->
+<style>
+/*to flush the nav bar against the top of the page*/
+    body {
+        margin: 0;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background: lightgrey;
+    }
+    .nav-item {
+        transition: 250ms;
+    }
+    .nav-item > a {
+        text-decoration: none;
+    }
+    .nav_section {
+        display: flex;
+    }
+    /*the asterisk is a child indicator of the class preceding it.*/
+    /*the greater-than sign is used to target any direct child of a class*/
+    .nav_section > *{
+        padding: 2px 4px;
+        background-color: lightgrey;
+    }
+    .nav_section > *:hover {
+        background: cornflowerblue;
+        cursor: pointer;
+        transition: 250ms;
+    }
+</style>
+
+<nav>
+<!--by placing contents in two separate divs, is how the 'about' gets push to the right with justify space-between-->
+    <div class="nav_section">
+        <div class="nav-item">News</div>
+        <div class="nav-item">Home</div>
+        <div class="nav-item"><a href="https://codeup.com">Contact</a></div>
+    </div>
+<!--don't want to use P tags because they have their own styling. I don't want that..-->
+
+    <div class="nav_section">
+        <div class="nav-item">About</div>
+<!--this way for the Nav bar, it will push to the top of the page and can be manipulated how I want later-->
+    </div>
+
+</nav>
+
+<main>
+<!--    should not have style here but for the sake of ease doing this here as well-->
+    <style>
+        .card {
+            width: 250px;
+            height: 350px;
+            border: solid orange 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        .card_name {
+            text-align: center;
+            font-weight: bold;
+        }
+        .card_title {
+            text-align: center;
+            color: grey;
+        }
+        .card_footer > img {
+            width: 40px;
+            height: 40px;
+        }
+        .card hr {
+            width: 45%;
+        }
+    </style>
+
+    <div class="card">
+        <div class="card_content">
+
+        <img src="https://pbs.twimg.com/profile_images/613588186065825792/kvxA6zxi_400x400.jpg" alt="worlds_best_boss">
+        <div class="card_name">Michael Scott</div>
+        <div class="card_title">Regional Manager</div>
+            <hr>
+        </div>
+
+        <div class="card_footer">
+            <img src="../assets/imgs/GitHub-Mark-32px.png" alt="github_logo">
+            <img src="../assets/imgs/GitHub-Mark-32px.png" alt="github_logo">
+            <img src="../assets/imgs/GitHub-Mark-32px.png" alt="github_logo">
+        </div>
+    </div>
+
+</main>
+
+<footer> </footer>
+
 </body>
 </html>
