@@ -1,0 +1,42 @@
+@media screen and (min-width: 350px) and (max-width: 1112px) {
+    body {
+        background-color: olivedrab;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.nav-logo {
+    margin: 1.5em 0 0 1em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header button {
+    width: 8%;
+}
