@@ -391,9 +391,60 @@ function areIdentical(input1, input2) {
 console.log(areIdentical("dog", "dog"));
 
 //Make a function named not(input) returns the input with a flipped boolean
+
+function not(input) {
+    return !input;
+}
+
+console.log(not('variable'));
+
 //Make a function named notNot(input) that the negation of the negation of the input.
+
+function notNot(input) {
+    return !!input;
+}
+
+console.log(notNot('variable'));
+
 //Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+
+function and(predicate1, predicate2) {
+    if (predicate1) {
+        return predicate2;
+    } return predicate1;
+}
+
+console.log(and(0, 1));
+console.log(and(1, 0));
+
 //Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+
+function or(predicate1, predicate2) {
+    return predicate1 > 0 || predicate2 > 0;
+}
+
+console.log(or(1, -10));
+
 //Write a function called reverseString(string) that reverses a string
+
+function reverseString(string) {
+    return string.split("").reverse().join("");
+}
+
+console.log(reverseString("string"));
+
 //Make a function named absoluteValue(number) that returns the absolute value of a number.
+
+function absoluteValue(number) {
+    return Math.abs(number)
+}
+
+console.log(absoluteValue(-1000));
+
 //Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+
+function rollDice(sides) {
+    return Math.floor(Math.random() * sides) + 1;
+}
+
+console.log(rollDice(6));
