@@ -6,7 +6,7 @@ body {
     background-color: #F0ECE3;
     margin: 0;
     padding-bottom: 2em;
-    width: 95%;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
