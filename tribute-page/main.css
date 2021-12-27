@@ -1,0 +1,46 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    display: flex;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 2em 0 1em;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    margin: 1.5em;
+}
+
+.at-a-glance, footer {
+    margin-top: 0.8em;
+}
+
+ol, .at-a-glance, .text, footer {
+    text-align: left;
+}
+
+li {
+    padding-top: 1em;
+}
+
+.quote {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 2em;
+    margin: 0.5em 0 0;
+}
+
+p {
+    font-size: 1em;
+    margin: 0 0 0.5em;
+}
+
