@@ -1,0 +1,60 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+#outside {
+    background-color: #778899;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 70%;
+    /* To see the limits of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.form-control {
+    padding: 4px 0;
+    margin: 0.5em 0;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}
+
+#survey-form {
+    background-color: white;
+}
+
+div + div {
+    margin-top: 1em;
+}
+
+.description {
+    font-size: 0.75em;
+    color: #9a9a9a;
+}
+
+.field-element {
+    width: 500px;
+    height: 100px;
+}
+
+.btn-primary {
+    background: #b4d455;
+    border-top: 1px solid #b4d455;
+    border-bottom: 1px solid #b4d455;
+    color: white;
+}

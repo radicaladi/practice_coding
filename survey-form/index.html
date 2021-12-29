@@ -2,205 +2,220 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--    main styling links-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/survey-form/main.css">
 
     <title>Personal Training Survey Form</title>
 </head>
 
 <body>
-<div class="main">
-    <div class="form-wrapper">
-        <div class="form-title">Training Program – Client Details Form</div>
-        <div class="inner-wrapper">
-            <form action="#" class="flex-form">
-                <label for="name">Name
+<div id="outside">
+    <form id="survey-form" action="#" method="post">
+        <h1 id="title">Training Program – Client Details Form</h1>
+        <label for="name">Name
 
-                    <span class="required" aria-hidden="true">*</span>
+            <span class="required" aria-hidden="true">*</span>
 
-                </label>
-                <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        class="form-control"
-                        placeholder="Enter your name"
-                        required
-                />
-            </form>
-            <div>
-                <label for="email">Email
+        </label>
+        <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+        >
 
-                    <span class="required" aria-hidden="true">*</span>
+        <div>
+            <label for="email">Email
 
-                </label>
-                <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="form-control"
-                        placeholder="Enter your email"
-                        required
-                />
-            </div>
-            <div>
-                <label for="gender">Gender
+                <span class="required" aria-hidden="true">*</span>
 
-                    <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+            />
+        </div>
 
-                </label>
-                <select name="gender" id="gender">
-                    <option>Male</option>
+        <div>
+            <label for="gender">Gender
 
-                    <option>Female</option>
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <select name="gender" id="gender">
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <optgroup label=""></optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="height">Height
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <input
+                    type="text"
+                    name="height"
+                    id="height"
+                    class="form-control"
+                    placeholder="Height in feet"
+                    required
+            >
+        </div>
+
+        <div>
+            <label for="weight">Weight
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <input
+                    type="text"
+                    name="weight"
+                    id="weight"
+                    class="form-control"
+                    placeholder="Weight in lbs"
+                    required
+            >
+        </div>
+
+        <div>
+            <label for="bfp">Body Fat % Estimate
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <div class="description">If unsure, please email a physique picture to urpersonaltrainer@gmail.com after purchase.</div>
+            <input
+                    type="text"
+                    name="bfp"
+                    id="bfp"
+                    class="form-control"
+                    placeholder="Enter your body fat %"
+                    required
+            >
+        </div>
+
+        <div>
+            <label class="title" for="activity">Activity Level (1-5)
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <input type="radio" name="activity" value="1">1
+
+            <input type="radio" name="activity" value="2">2
+
+            <input type="radio" name="activity" value="3">3
+
+            <input type="radio" name="activity" value="4">4
+
+            <input type="radio" name="activity" value="5">5
+        </div>
+
+        <div>
+            <label class="title">Number of Days You Are Able to Train (per week)
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+            <label>
+                <select name="days" aria-required="true">
+
+                    <option value="2">2</option>
+
+                    <option value="3">3</option>
+
+                    <option value="4">4</option>
+
+                    <option value="5">5</option>
+
+                    <option value="6">6</option>
 
                     <optgroup label=""></optgroup>
                 </select>
-            </div>
-            <div>
-                <label for="height">Height
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-                <input
-                        type="text"
-                        name="height"
-                        id="height"
-                        class="form-control"
-                        placeholder="height in feet"
-                        required
-                />
-            </div>
-            <div>
-                <label for="weight">Weight
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-                <input
-                        type="text"
-                        name="weight"
-                        id="weight"
-                        class="form-control"
-                        placeholder="weight in lbs"
-                        required
-                />
-            </div>
-            <div>
-                <label for="bfp">Body Fat % Estimate
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-                <div class="description">If unsure, please email a physique picture to urpersonaltrainer@gmail.com after purchase.</div>
-                <input
-                        type="text"
-                        name="bfp"
-                        id="bfp"
-                        class="form-control"
-                        placeholder="Enter your body fat %"
-                        required
-                />
-            </div>
-            <div>
-                <label class="title" for="activity">Activity Level (1-5)
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-                <input
-                        type="text"
-                        name="activity"
-                        id="activity"
-                        class="form-control"
-                        placeholder=" "
-                        required
-                />
-            </div>
-            <div>
-                <label class="title">Number of Days You Are Able to Train (per week)
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-                <label>
-                    <select name="days" aria-required="true">
-
-                        <option value="2">2</option>
-
-                        <option value="3">3</option>
-
-                        <option value="4">4</option>
-
-                        <option value="5">5</option>
-
-                        <option value="6">6</option>
-
-                        <optgroup label=""></optgroup>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <label class="title" for="goals">Goal of Program
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-
-                <div class="description">Please provide details of what you hope to achieve from the programme. Be it building muscle, losing fat... etc</div>
-                <textarea class="field-element " id="goals" aria-required="true"></textarea>
-            </div>
-            <fieldset id="injuries" class="form-item field checkbox required" aria-required="true">
-
-                <legend class="title">
-                    Do you have any injuries/limitations?
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </legend>
-
-
-                <div class="option"><label><input type="checkbox" name="checkbox-yes" value="Yes"> Yes</label></div>
-
-                <div class="option"><label><input type="checkbox" name="checkbox-no" value="No"> No</label></div>
-
-            </fieldset>
-            <div id="textarea-injuries" class="form-item field textarea required">
-
-                <label class="title" for="textarea-limits">
-                    Injuries/Limitations Details
-
-                    <span class="required" aria-hidden="true">*</span>
-
-                </label>
-
-                <div class="description">If 'yes' to the question above, please provide details of any injuries or equipment limitations you have.</div>
-                <textarea class="field-element " id="textarea-limits" aria-required="true"></textarea>
-            </div>
-            <div id="textarea-exp" class="form-item field textarea">
-
-                <label class="title" for="textarea-previous-training">
-                    Current/Previous Training
-
-                </label>
-
-                <div class="description">Please provide a summary of your current and/or past training (training split, cardio, etc.)</div>
-                <textarea class="field-element " id="textarea-previous-training"></textarea>
-            </div>
-            <div id="textarea-info" class="form-item field textarea">
-
-                <label class="title" for="textarea-add-info">
-                    Additional Information
-
-                </label>
-
-                <div class="description">Please provide any additional information you feel may be relevant.</div>
-                <textarea class="field-element " id="textarea-add-info"></textarea>
-            </div>
-            <div data-animation-role="button" class="form-button-wrapper">
-                <input class="button sqs-system-button sqs-editable-button sqs-button-element--primary" type="submit" value="Purchase">
-            </div>
+            </label>
         </div>
-    </div>
+
+        <div>
+            <label class="title" for="goals">Goal of Program
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+
+            <div class="description">Please provide details of what you hope to achieve from the programme. Be it building muscle, losing fat... etc</div>
+            <textarea class="field-element" id="goals" aria-required="true"></textarea>
+        </div>
+
+        <fieldset id="injuries" class="form-item field checkbox required" aria-required="true">
+
+            <legend class="title">
+                Do you have any injuries/limitations?
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </legend>
+
+            <div>
+                <label class="title" for="injuries"></label>
+                <input type="radio" name="activity" value="1">Yes<br>
+
+                <input type="radio" name="activity" value="2">No
+            </div>
+
+        </fieldset>
+
+        <div id="textarea-injuries" class="form-item field textarea required">
+
+            <label class="title" for="textarea-limits">
+                Injuries/Limitations Details
+
+                <span class="required" aria-hidden="true">*</span>
+
+            </label>
+
+            <div class="description">If 'yes' to the question above, please provide details of any injuries or equipment limitations you have.</div>
+            <textarea class="field-element " id="textarea-limits" aria-required="true"></textarea>
+        </div>
+
+        <div id="textarea-exp" class="form-item field textarea">
+
+            <label class="title" for="textarea-previous-training">
+                Current/Previous Training
+
+            </label>
+
+            <div class="description">Please provide a summary of your current and/or past training (training split, cardio, etc.)</div>
+            <textarea class="field-element " id="textarea-previous-training"></textarea>
+        </div>
+
+        <div id="textarea-info" class="form-item field textarea">
+
+            <label class="title" for="textarea-add-info">
+                Additional Information
+
+            </label>
+
+            <div class="description">Please provide any additional information you feel may be relevant.</div>
+            <textarea class="field-element " id="textarea-add-info"></textarea>
+        </div>
+
+        <div data-animation-role="button" class="form-button-wrapper">
+            <input class="btn-primary" type="submit" value="Purchase">
+        </div>
+    </form>
 </div>
 </body>
 </html>
