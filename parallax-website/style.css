@@ -21,3 +21,54 @@ body, html{
     */
     background-attachment:fixed;  /*this here*/
 }
+
+.img1{
+    background-image: url(../assets/imgs/cMcImg1.jpeg);
+    min-height:100%;
+}
+
+.img2{
+    background-image:url(../assets/imgs/cMcImg2.jpeg);
+    min-height:400px;
+}
+
+.img3{
+    background-image:url(../assets/imgs/cMcImg3.jpeg);
+    min-height:400px;
+}
+
+.section{
+    text-align:center;
+    padding:50px 80px;
+}
+
+.section-light{
+    background-color:#f4f4f4;
+    color:#666;
+}
+
+.section-dark{
+    background-color:#282e34;
+    color:#ddd;
+}
+
+.ptext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+
+.ptext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+}
+
+.ptext .border.trans{
+    background-color:transparent;
+}
