@@ -72,3 +72,9 @@ body, html{
 .ptext .border.trans{
     background-color:transparent;
 }
+
+@media(max-width:568px){
+    .img1, .img2, img3{
+        background-attachment:scroll;
+    }
+}
