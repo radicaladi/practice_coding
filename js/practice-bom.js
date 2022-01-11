@@ -59,7 +59,7 @@ console.log(add(favoriteNumber));
 //     }
 // }, interval);
 
-        //set timeout
+        //SET TIMEOUT
 
 'use strict';
 
@@ -69,6 +69,17 @@ var timeoutId = setTimeout(function () {
     alert('Here is a delayed hello!');
 }, delay);
 
+console.log(timeoutId)
 // to cancel the timeout, you can call
 // clearTimeout(timeoutId);
 // prior to the delay expiring
+
+        // WINDOW LOCATION
+window.location = "java.codeup.com"
+
+var delayRedirect = setTimeout(function () {
+    window.location = "java.codeup.com";
+}, delay);
+
+// The above BOM, combines set timeout and window location.
+// With "delayRedirect" the browser window will change to the declared window.location with the parameters of the setTimout function.
