@@ -18,3 +18,9 @@ function fibonacciSequence (terms) {
 
 fibonacciSequence(20);
 //enter an amount of terms and the function will output the sequence that number of times
+
+//DOM PRACTICE --- changing html content within tags using DOM
+
+var weatherContent = document.getElementById("content");
+
+weatherContent.innerHTML = "The weather is currently fair with a temperature of 8.38 celsius.";
