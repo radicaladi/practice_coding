@@ -2,16 +2,69 @@
 
 // Write a function that takes in a number and returns triple the value of the passed number. Assume only number inputs.
 
+function tripleNumber (number) {
+    return number * 3;
+}
+
+console.log("should return 9...");
+console.log(tripleNumber(3));
+console.log("//////////");
 
 // Modify the above function to work with numeric strings as well.
 
+function newTripleNumber (number) {
+    return parseInt(tripleNumber(number));
+}
+
+console.log("should return 9...")
+console.log(newTripleNumber("3"));
+console.log("//////////");
+
 // Modify the above function to return a string output of 'not a number' if the input is not a number or numeric string.
+
+function newNewTripleNumber (number) {
+    if (isNaN(number)) {
+        return "not a number";
+    }
+    return newTripleNumber(number);
+}
+
+console.log("should return not a number...");
+console.log(newNewTripleNumber("three"));
+console.log("but should return 9...")
+console.log(newNewTripleNumber("3"));
+console.log("//////////");
 
 // Write a function that takes in a number and string and returns the string 'matches length' if the passed number is the length of the passed string and returns 'no length match' otherwise.
 
+function matchLengths (number, string) {
+    if (number === string.length) {
+        return "matches length"
+    }
+    return "no length match."
+}
+
+console.log("should return matches length...");
+console.log(matchLengths(3, "New"));
+console.log("but should return no length match...");
+console.log(matchLengths(3, "long"));
+console.log("//////////");
 
 // (CHALLENGE) Write a function that takes in a day of the week as a string and returns the number that matches the day of the week. 'Sunday' should return 1 and 'Saturday' should return 7.
 
+let days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+function returnDay(day) {
+    let dayValue = day.toLowerCase(); //makes any input lowercase and thus case-insensitive.
+    return days.indexOf(dayValue) + 1;
+} // function will use array 'days' and match the 'day' input to the indexOf the day provided plus 1.
+
+console.log("should be 4...");
+console.log(returnDay('Wednesday'));
+console.log("should be 6...");
+console.log(returnDay('friday'));
+console.log("should be 0..."); //is 0 because there will be no index for any input not in the array.
+console.log(returnDay("someday"));
+console.log("//////////");
 
 // ========== + Loops
 
