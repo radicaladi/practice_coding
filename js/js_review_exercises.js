@@ -70,22 +70,42 @@ console.log("//////////");
 
 // Write a function that takes in a string input and logs each character of the string separately
 
+function separate (string) {
+    for (let i = 0; i < string.length; i++) {
+        console.log(string[i]);
+    }
+}
+
+separate("string");
+console.log("//////////")
+
 // Write a function that takes in a string and logs it 133 times
 
-// Write a function that takes in a string input and logs the first character, then the first two characts, etc., until the full string is logged.
+function repeatIt (string) {
+    return string.repeat(133);
+}
+
+console.log(repeatIt("liverpool"));
+console.log("//////////")
+
+// Write a function that takes in a string input and logs the first character, then the first two characters, etc., until the full string is logged.
+
+function breadCrumbs (string) {
+
+}
 
 // Example Input: 'Codeup'
 //
 // Example Output:
 //
-//     "C"
+// "C"
 // "Co"
 // "Cod"
 // "Code"
 // "Codeu"
 // "Codeup"
 
-// (CHALLENGE) Write a function that takes in two string inputs and for each letter in the first string, logs how many times that given letter appears in the second string. It should be case insensitive. If a letter appears more than once in the first string, the output should simply log the same message as many times as it appears in the first string.
+// (CHALLENGE) Write a function that takes in two string inputs and for each letter in the first string, logs how many times that given letter appears in the second string. It should be case-insensitive. If a letter appears more than once in the first string, the output should simply log the same message as many times as it appears in the first string.
 
 // Example Inputs: "Codeup", "Coding Challenges"
 //
@@ -102,6 +122,15 @@ console.log("//////////");
 // ========== + Arrays
 
 // Write a function that takes in two inputs and returns an array with those two inputs
+
+function makeArray (input1, input2) {
+    let array = [];
+    array.push(input1, input2);
+    console.log(array);
+}
+
+makeArray("planet", "moon");
+console.log("//////////");
 
 // Write a function that takes in and array and another input and returns true if the value of the second input is an element in the first input array
 
