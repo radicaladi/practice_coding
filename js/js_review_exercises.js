@@ -134,9 +134,43 @@ console.log("//////////");
 
 // Write a function that takes in and array and another input and returns true if the value of the second input is an element in the first input array
 
+let planets = ['venus', 'earth', 'mars'];
+
+function matchPlanets(planet) {
+    for(let i = 0; i < planets.length; i++) {
+        if (planet === planets[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log("should return true...");
+console.log(matchPlanets("mars"));
+console.log("should return false...");
+console.log(matchPlanets("pluto"));
+console.log("//////////");
+
 // Write a function that takes in an array of numbers and returns the lowest number. Assume only number element values and an array of at least two numbers.
 
+let numbers = [34, 89, 67, 22, 16, 100]
+
+function returnLowest (array) {
+    return Math.min.apply(Math, array);
+}
+
+console.log("should return 16...")
+console.log(returnLowest(numbers));
+console.log("//////////")
+
 // Write a function that takes in an array of numbers and returns the product of the lowest and highest number. Assume only number element values and an array of at least two numbers.
+
+function productNumbers (array) {
+    return Math.min.apply(Math, array) * Math.max.apply(Math, array);
+}
+
+console.log("should return 1600");
+console.log(productNumbers(numbers));
 
 // Write a function that takes in an array of numbers and returns the sum of the lowest two numbers. Assume only number element values and an array of at least two numbers.
 
