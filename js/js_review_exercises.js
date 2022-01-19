@@ -171,6 +171,7 @@ function productNumbers (array) {
 
 console.log("should return 1600");
 console.log(productNumbers(numbers));
+console.log('//////////')
 
 // Write a function that takes in an array of numbers and returns the sum of the lowest two numbers. Assume only number element values and an array of at least two numbers.
 
@@ -185,6 +186,17 @@ console.log(productNumbers(numbers));
 // ========== + Objects
 
 // Write a function that takes in an object and returns the object with an added property called 'extra' and a value of 'extra value'
+
+let subaru = {model: "outback", cylinder: '6', fourWheel: true}
+
+function extraObjects (object) {
+    return object.extra = 'extra value';
+}
+
+console.log(extraObjects(subaru));
+console.log(subaru);
+console.log("//////////");
+
 
 // Assume for the next questions, this can be used as the array of user objects:
 
