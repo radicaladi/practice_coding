@@ -10,3 +10,26 @@ var vierBuchstabe = names.filter(function (names) {       //using traditional fu
 })
 
 console.log(vierBuchstabe);
+
+///////////////////////////////////// Class Warmup – 20 Jan 2022
+
+//write a function that accepts a string and checks whether each string is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter
+//
+// input example: "bJIENsdfRAIRVIrsRFAijgRar"
+
+function determineCharCase(string) {
+    for (let i = 0; i <= string.length - 1; i++) {
+        let character = string.charAt(i);
+
+        if (character === character.toUpperCase()) {
+            console.log("the character, " + string.charAt(i) + " is uppercase.");
+        }
+        if (character === character.toLowerCase()) {
+            console.log("the character, " + string.charAt(i) + " is lowercase.");
+        }
+
+    }
+}
+
+console.log("//////////")
+determineCharCase("bJIENsdfRAIRVIrsRFAijgRar");
