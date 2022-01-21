@@ -3,12 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        .skills {
+            width: 500px;
+            margin: 60px auto;
+        }
+        .skills li {
+            margin: 20px 0;
+        }
+        .bar {
+            background: #353b48;
+            display: block;
+            height: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #2187e7b3;
+        }
+        .bar span {
+            height:  2px;
+            float: left;
+            background-color: #2187e7;
+        }
+        .html {
+            width: 90%;
+            animation: html 2s;
+        }
+        @keyframes html {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 90%;
+            }
+        }
+        .css {
+            width: 60%;
+            animation: css 2s;
+        }
+        @keyframes css {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 60%;
+            }
+        }
+        .javascript {
+            width: 60%;
+            animation: javascript 2s;
+        }
+        @keyframes javascript {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 60%;
+            }
+        }
+        .bootstrap {
+            width: 70%;
+            animation: bootstrap 2s;
+        }
+        @keyframes html {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 70%;
+            }
+        }
+        .jquery {
+            width: 40%;
+            animation: jquery 2s;
+        }
+        @keyframes jquery {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 40%;
+            }
+        }
+    </style>
 </head>                    
 <body>
 
 <h1>Hello Moto!</h1>
 
 <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ducimus assumenda earum nam atque enim.</p>
+
+<h1>
+    My Skills
+</h1>
+<ul class="skills">
+    <li>
+        HTML5 <span class="bar"><span class="html"></span></span>
+    </li>
+    <li>
+        CSS3 <span class="bar"><span class="css"></span></span>
+    </li>
+    <li>
+        JAVASCRIPT <span class="bar"><span class="javascript"></span></span>
+    </li>
+    <li>
+        BOOTSTRAP <span class="bar"><span class="bootstrap"></span></span>
+    </li>
+    <li>
+        JQUERY <span class="bar"><span class="jquery"></span></span>
+    </li>
+</ul>
 
 
 <script src="../js/function_basics.js"></script>
