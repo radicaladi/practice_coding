@@ -28,3 +28,15 @@ $("#bottom").css("background-color", "#b7b7a4");
 $(".highlight").css("background-color", "#fbf8cc");
 
 // 8. BONUS: when you click on the image, make the image larger than what it currently is
+$("#floofers").hover(makeBigger, revert);
+
+function makeBigger() {
+    $(this).css("transform", "scale(2, 2)");
+    $(this).css("padding-left", "150px");
+    $(this).css("transition", "1s");
+}
+function revert() {
+    $(this).css("transform", "");
+    $(this).css("padding-left", "");
+    $(this).css("transition", "1s");
+}
