@@ -15,8 +15,16 @@ $('body').css("font-family", "luxurious roman, cursive");
 //    --->font-family: ‘Abril Fatface’, cursive;
 //        font-family: ‘Questrial’, sans-serif;
 
-// 4. give each section a unique id
+// 4. give each section a unique id ✅
 // 5. using the unique id’s give each section a different background color
-// 6. give 3 elements the same class name of “highlight”
+$("header").css("background-color", "#cb997e");
+$("#salesPitch").css("background-color", "#ddbea9");
+$("#content").css("background-color", "#ffe8d6");
+$("#closeView").css("background-color", "#b7b7a4");
+$("#bottom").css("background-color", "#b7b7a4");
+
+// 6. give 3 elements the same class name of “highlight” ✅
 // 7. give each of those 3 elements a bright yellow background
+$(".highlight").css("background-color", "#fbf8cc");
+
 // 8. BONUS: when you click on the image, make the image larger than what it currently is
