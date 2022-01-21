@@ -18,18 +18,21 @@ console.log(vierBuchstabe);
 // input example: "bJIENsdfRAIRVIrsRFAijgRar"
 
 function determineCharCase(string) {
-    for (let i = 0; i <= string.length - 1; i++) {
+    for (let i = 0; i <= string.length - 1;) {
         let character = string.charAt(i);
-
-        if (character === character.toUpperCase()) {
-            console.log("the character, " + string.charAt(i) + " is uppercase.");
+        if (!character.match(/[A-Za-z]/i)){
+            console.log("the character, " + string.charAt(i) + " is not a letter.");
+        } else {
+            if (character === character.toUpperCase()) {
+                console.log("the character, " + string.charAt(i) + " is uppercase.");
+            }
+            if (character === character.toLowerCase()) {
+                console.log("the character, " + string.charAt(i) + " is lowercase.");
+            }
         }
-        if (character === character.toLowerCase()) {
-            console.log("the character, " + string.charAt(i) + " is lowercase.");
-        }
-
+        i++;
     }
 }
 
 console.log("//////////")
-determineCharCase("bJIENsdfRAIRVIrsRFAijgRar");
+determineCharCase("b*JIENsdfRAIRVIrsRFAijgRar");
