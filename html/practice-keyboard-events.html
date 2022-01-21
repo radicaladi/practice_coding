@@ -16,21 +16,18 @@
         // TODO: when the user types the letter 'c', pop up a confirm that says "Logout?"
         // TODO: when the user types the letter 'p', prompt the user to enter their username
 
-        $(document).keyup(function(event){
-            if (event.keyCode === 65){
+        $(document).on('keydown', function(e){
+            if (e.key === 'a'){
                 alert("Welcome!");
-            }
-        });
-        $(document).keyup(function(event){
-            if (event.keyCode === 67){
+            } else
+            if (e.key === 'c'){
                 confirm("logout?");
-            }
-        });
-        $(document).keyup(function(event){
-            if (event.keyCode === 80){
+            } else
+            if (e.key === 'p'){
                 prompt("Enter username...");
             }
         });
+
     });
 </script>
 
