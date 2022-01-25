@@ -18,3 +18,33 @@ console.log("should be 40...")
 console.log(sumOfStrings("42958372")); //exercise given
 console.log("should be 34...")
 console.log(sumOfStrings("917485")); //exercise given
+console.log("//////////")
+
+// -- 25 january warmup
+
+function findDuplicateNums (string) {
+    let strNumArr = string.split('');
+    let dupArr = {};
+    console.log("your array is as follows...")
+    console.log(strNumArr);
+    let resultToReturn;
+    for (let i = 0; i <= strNumArr.length - 1; i++) {
+        if (dupArr[strNumArr[i]]) {
+            resultToReturn = true;
+            break;
+        }
+        dupArr[strNumArr[i]] = true;
+    }
+    if (resultToReturn) {
+        console.log("Sorting dupes!")
+        console.log(dupArr)
+    }
+    else {
+        console.log("No dupes here!")
+    }
+}
+
+findDuplicateNums("42992338111134");
+console.log("//////////");
+findDuplicateNums("BQAAIPPPPFFA");
+console.log("//////////")
