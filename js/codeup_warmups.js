@@ -48,3 +48,20 @@ findDuplicateNums("42992338111134");
 console.log("//////////");
 findDuplicateNums("BQAAIPPPPFFA");
 console.log("//////////")
+
+// -- 8 february warmup
+
+//write a function that removes duplicates from the array
+
+let numArr = [2,3,5,8,3,1,2,6,3,2,7,8,2,4,7]
+
+let noDupes = numArr.reduce((previousValue, currentValue) => {
+    if (previousValue.includes(currentValue)){
+        return previousValue;
+    }
+    return [...previousValue, currentValue]
+    // return previousValue.includes(currentValue) ? previousValue : [...previousValue, currentValue];
+}, []);
+
+console.log(numArr);
+console.log(noDupes);
