@@ -65,3 +65,21 @@ let noDupes = numArr.reduce((previousValue, currentValue) => {
 
 console.log(numArr);
 console.log(noDupes);
+
+// -- 9 february warmup
+
+// write a function that takes a string as argument and returns the number of vowels contained in that string.
+
+let vowels = "aeiouAEIOU"; // set vowels parameters
+let count = 0; // set the counter
+
+function vowFilter (input) {
+    for (let i = 0; i < input.length; i++) { // for loop through each character with input.length
+        if (vowels.indexOf(input[i]) !== -1) { // if vowels has an index of input at i...
+            count+= 1; // ...count 1.
+        }
+    }
+    return count; // return the count after loop is complete
+}
+
+console.log(`your word has ` + vowFilter("Onomatopoeia") + ` vowels`);
