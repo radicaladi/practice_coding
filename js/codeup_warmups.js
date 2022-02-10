@@ -83,3 +83,20 @@ function vowFilter (input) {
 }
 
 console.log(`your word has ` + vowFilter("Onomatopoeia") + ` vowels`);
+console.log('//////////')
+
+// -- 10 february warmup
+
+// write a function that counts the number of duplicate characters
+
+function countDupes (string) { // taking a string input
+    let arr = string.split(""); // turns string into array
+    console.log(arr)
+    let counts = {}; // keeps tally of repeated chars
+    arr.forEach((x) => { // use foreach to loop through array
+        counts[x] = (counts[x] || 0) + 1; // adds to counts-object each value that is looped through and adds 1 to it every additional time.
+    })
+    console.log(counts);
+}
+
+countDupes("eventuality")
