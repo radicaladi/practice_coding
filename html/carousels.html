@@ -3,10 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Carousel Practice</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=montserrat&amp;display=swap"rel="stylesheet">
     <link rel="stylesheet" href="../css/carousels.css">
 </head>
 
 <body>
+
+<div class="app">
+
+    <div class="card-list">
+        <button class="card-list-btn btn btn--left">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </div>
+        </button>
+
+        <div class="cards-wrapper">
+            <div class="card current--card">
+                <div class="card-image">
+                    <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="card next--card">
+            <div class="card-image">
+                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="">
+            </div>
+        </div>
+        
+        <div class="card previous--card">
+            <div class="card-image">
+                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="">
+            </div>
+        </div>
+
+        <button class="card-list-btn btn btn--right">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <div class="info-list">
+        <div class="info-wrapper">
+            <div class="info current--info">
+                <h1 class="text name">Highlands</h1>
+                <h4 class="text location">Scotland</h4>
+                <p class="text description">The mountains are calling</p>
+            </div>
+        </div>
+
+        <div class="info next--info">
+            <h1 class="text name">Machu Pichu</h1>
+            <h4 class="text location">Peru</h4>
+            <p class="text description">Adventure is never far away</p>
+        </div>
+
+        <div class="info previous--info">
+            <h1 class="text name">Chamonix</h1>
+            <h4 class="text location">France</h4>
+            <p class="text description">Let your dreams come true</p>
+        </div>
+    </div>
+
+    <div class="app-bg">
+        <div class="app-bg-image current--image">
+            <img src="https://source.unsplas.com/Z8dtTatMVMw" alt="">
+        </div>
+        <div class="app-bg-img next--image">
+            <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="">
+        </div>
+        <div class="app-bg-image previous--image">
+            <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="">
+        </div>
+
+        <div class="loading-wrapper">
+            <div class="loader--text">Loading...</div>
+            <div class="loader">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 </body>
 </html>
