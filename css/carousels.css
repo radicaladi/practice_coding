@@ -19,3 +19,49 @@ body {
     background: rgba(0, 0, 0, 0.787);
     overflow: hidden;
 }
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-bg::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    opacity: 0.8;
+}
+.app-bg-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
+    width: 100%;
+    height: 100%;
+    transition: transform 1000ms ease, opacity 1000ms ease;
+    overflow: hidden;
+}
