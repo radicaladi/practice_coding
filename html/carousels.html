@@ -1,108 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Carousel Practice</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=montserrat&amp;display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="../css/carousels.css">
+    <meta charset="utf-8">
+    <title>Owl-carousel Cards Slider | CodingNepal</title>
+    <link rel="stylesheet" href="../css/carousel.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
-
 <body>
-
-<div class="app">
-
-    <div class="card-list">
-        <button class="card-list-btn btn btn--left">
-            <div class="icon">
-                <svg>
-                    <use xlink:href="#arrow-left"></use>
-                </svg>
-            </div>
-        </button>
-
-        <div class="cards-wrapper">
-            <div class="card current--card">
-                <div class="card-image">
-                    <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="">
-                </div>
-            </div>
+<div class="slider owl-carousel">
+    <div class="card">
+        <div class="img">
+            <img src="#" alt="">
         </div>
-
-        <div class="card next--card">
-            <div class="card-image">
-                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="">
+        <div class="content">
+            <div class="title">
+                Briana Tozour
+            </div>
+            <div class="sub-title">
+                Graphic Designer
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.
+            </p>
+            <div class="btn">
+                <button>Read more</button>
             </div>
         </div>
-        
-        <div class="card previous--card">
-            <div class="card-image">
-                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="">
-            </div>
-        </div>
-
-        <button class="card-list-btn btn btn--right">
-            <div class="icon">
-                <svg>
-                    <use xlink:href="#arrow-right"></use>
-                </svg>
-            </div>
-        </button>
-    </div>
-
-    <div class="info-list">
-        <div class="info-wrapper">
-            <div class="info current--info">
-                <h1 class="text name">Highlands</h1>
-                <h4 class="text location">Scotland</h4>
-                <p class="text description">The mountains are calling</p>
-            </div>
-        </div>
-
-        <div class="info next--info">
-            <h1 class="text name">Machu Pichu</h1>
-            <h4 class="text location">Peru</h4>
-            <p class="text description">Adventure is never far away</p>
-        </div>
-
-        <div class="info previous--info">
-            <h1 class="text name">Chamonix</h1>
-            <h4 class="text location">France</h4>
-            <p class="text description">Let your dreams come true</p>
-        </div>
-    </div>
-
-    <div class="app-bg">
-        <div class="app-bg-image current--image">
-            <img src="https://source.unsplas.com/Z8dtTatMVMw" alt="">
-        </div>
-        <div class="app-bg-img next--image">
-            <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="">
-        </div>
-        <div class="app-bg-image previous--image">
-            <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="">
-        </div>
-
-        <div class="loading-wrapper">
-            <div class="loader--text">Loading...</div>
-            <div class="loader">
-                <span></span>
-            </div>
-        </div>
-
-        <svg class="icons" style="display:none;">
-            <symbol id="arrow-left" xm1ns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <polyline points="328 112 184 256 328 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
-            </symbol>
-            <symbol id="arrow-right" xm1ns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <polyline points="184 112 328 256 184 400" style="fill:none;stroke: #fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
-            </symbol>
-        </svg>
     </div>
 </div>
-
-<script type="text/javascript" src="https://unpkg.co/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="httsp://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-<script src="../js/carousel.js"></script>
+<script>
+    $(".slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000ms = 2s;
+        autoplayHoverPause: true,
+    });
+</script>
 </body>
 </html>
