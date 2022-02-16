@@ -100,3 +100,16 @@ function countDupes (string) { // taking a string input
 }
 
 countDupes("eventuality")
+
+// -- 16 february '22 warmup
+
+// Write a function that places all negative integers at the end of an array
+
+let arrayToSort = [-2,5,8,-3,3,5,-9,6]
+
+arrayToSort.sort(function (a, b) {
+    return a - b;
+}).reverse()
+
+console.log(arrayToSort)
+console.log("//////////")
