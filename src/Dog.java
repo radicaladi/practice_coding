@@ -10,3 +10,9 @@ public class Dog {
         d.speak();
     }
 }
+
+/* note 1:
+    Created a dog object, Dog with the function of speak.
+    when speak is called in the main, the return will be a print line of "Woof!"
+    this is the dog speaking.
+ */
