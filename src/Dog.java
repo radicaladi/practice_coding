@@ -18,3 +18,7 @@ public class Dog {
     when speak is called in the main, the return will be a print line of "Woof!"
     this is the dog speaking.
  */
+/* not 2:
+    create new dog object with Beagle subclass and call b.speak() to access Beagle version of speak() from main.
+    Beagle speak being "arf arf!".
+ */
