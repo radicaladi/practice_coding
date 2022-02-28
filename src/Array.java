@@ -31,7 +31,34 @@ public class Array {
         int[] customers = {100, 50, 160};
         System.out.println(Arrays.toString(customers));
 
-        // create a method (nums) that returns the sum of all integers in an int array
+        // TODO: create a method (nums) that returns the sum of all integers in an int array
         // [5, 2, 3, 1] // 11
+
+        /*
+            step 1: create method (nums)
+                1a: what's the method signature
+                1b: what data type is being returned
+            step 2: create array of ints
+                2a: what's the length
+                2b: where does this array go
+            step 3: assign values to array
+                3a: how to initialize array of ints
+                3b: array literal {} or array declaration of new []
+            step 4: iterate through elements of array
+                4a: traditional for loop -or- enhanced for
+            step 5: create variable to store sum of array elements
+            step 6: add logic that will add each element to itself
+                6a: sum variable = sum + index of element
+         */
+
+        int sum = 0;
+        int[] nums = {5, 7, 9};
+
+        // traditional for loop
+        for (int i = 0; i < nums.length; i++)
+        {
+            sum += nums[i];
+            System.out.println(sum);
+        }
     }
 }
