@@ -75,14 +75,14 @@ public class Array {
     static int[] nums; // static int array variable
     static int sum = 0; // static int variable for sum of array
 
-    public static int nums(int indexEins, int indexZwei, int indexDrei) {
+    public static void nums(int indexEins, int indexZwei, int indexDrei) {
         nums = new int[]{indexEins, indexZwei, indexDrei};
         for (int num: nums)
         {
             sum += num;
-            System.out.println(sum);
+//            System.out.println(sum); // if placed here, it will show each iteration calculation
         }
-        return sum;
+        System.out.println(sum); // placed here, displays only last iteration calculation
     }
 
 }
