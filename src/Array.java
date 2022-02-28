@@ -1,8 +1,6 @@
 import java.util.Arrays;
 
 public class Array {
-//    int[] nums;
-
     public static void main(String[] args) {
 
         // Java Arrays requirements:
@@ -53,8 +51,8 @@ public class Array {
                 6a: sum variable = sum + index of element
          */
 
-        int sum = 0;
-        int[] nums = {5, 7, 9};
+//        int sum = 0;
+//        int[] nums = {5, 7, 9};
 
         // traditional for loop
 //        for (int i = 0; i < nums.length; i++)
@@ -64,11 +62,27 @@ public class Array {
 //        }
 
         // enhanced java for loop
+//        for (int num: nums)
+//        {
+//            sum += num;
+//            System.out.println(sum);
+//        }
+
+        nums(5, 7, 9); // calling the nums method to return results
+    }
+
+    // TODO: The same method, for loop, iteration as above but using a public method with parameters...
+    static int[] nums; // static int array variable
+    static int sum = 0; // static int variable for sum of array
+
+    public static int nums(int indexEins, int indexZwei, int indexDrei) {
+        nums = new int[]{indexEins, indexZwei, indexDrei};
         for (int num: nums)
         {
             sum += num;
             System.out.println(sum);
         }
+        return sum;
     }
 
 }
