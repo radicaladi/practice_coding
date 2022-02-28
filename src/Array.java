@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class Array {
+//    int[] nums;
+
     public static void main(String[] args) {
 
         // Java Arrays requirements:
@@ -55,10 +57,18 @@ public class Array {
         int[] nums = {5, 7, 9};
 
         // traditional for loop
-        for (int i = 0; i < nums.length; i++)
+//        for (int i = 0; i < nums.length; i++)
+//        {
+//            sum += nums[i];
+//            System.out.println(sum);
+//        }
+
+        // enhanced java for loop
+        for (int num: nums)
         {
-            sum += nums[i];
+            sum += num;
             System.out.println(sum);
         }
     }
+
 }
