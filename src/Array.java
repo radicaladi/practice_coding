@@ -5,7 +5,7 @@ public class Array {
 
         // Java Arrays requirements:
         // * Must have length of array defined before using it
-        // * All arrays
+        // * All arrays store the same data type
 
         // step 1: create variable of array type.
         // String[] name; int[] name; etc
