@@ -8,6 +8,8 @@ public class Dog {
     {
         Dog d = new Dog();
         d.speak();
+        Dog b = new Beagle();
+        b.speak();
     }
 }
 
