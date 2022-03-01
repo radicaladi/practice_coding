@@ -72,8 +72,13 @@ public class Array {
 //        }
 
         nums(5, 7, 9); // calling the nums method to return results
-        numNums();
+        System.out.println(Arrays.toString(solution));
+        numNums(arrayToSum);
     }
+
+    static int[] arrayToSum = {2,4,8,5,1,2};
+
+    static int[] solution = numNums(arrayToSum);
 
     // TODO: The same method, for loop, iteration as above but using a public method with parameters...
     static int[] nums; // static int array variable
@@ -100,12 +105,13 @@ public class Array {
     // step 5: add logic to sum even numbers stored in even variable, and odd numbers stored in odd variable
     // step 6: make new array with variables holding the sums
     // step 7: print new array to view result; use Arrays.toString() to see in human readable output
-    public static void numNums()
+    // refactor:
+    // array now allows arguments to pass various arrays to the method and return calculations
+    public static int[] numNums(int[] ogArr)
     {
         int odd = 0;
         int even = 0;
-        int[] arrayToSum = {2,4,8,5,1,2};
-        for (int n: arrayToSum)
+        for (int n: ogArr)
         {
             if (n % 2 == 0) {
                 even += n;
@@ -116,6 +122,7 @@ public class Array {
         }
         int[] newN = {even, odd};
         System.out.println(Arrays.toString(newN));
+        return newN;
     }
 
 }
