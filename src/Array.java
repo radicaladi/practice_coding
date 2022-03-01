@@ -19,6 +19,7 @@ public class Array {
         weather[1] = "cloudy";
         weather[2] = "rainy";
         System.out.println(weather[0]);
+        System.out.println();
         // error -- array out of bounds as follows,
 //        System.out.println(weather[5]); // throws exception because index of 5 does not exist on this array
 
@@ -26,10 +27,12 @@ public class Array {
         // array that holds daily steps
         int[] dailySteps = {10000, 12000, 22000};
         System.out.println(Arrays.toString(dailySteps));
+        System.out.println();
 
         // an array of ints and print out the array
         int[] customers = {100, 50, 160};
         System.out.println(Arrays.toString(customers));
+        System.out.println();
 
         // TODO: create a method (nums) that returns the sum of all integers in an int array
         // [5, 2, 3, 1] // 11
@@ -69,6 +72,7 @@ public class Array {
 //        }
 
         nums(5, 7, 9); // calling the nums method to return results
+        numNums();
     }
 
     // TODO: The same method, for loop, iteration as above but using a public method with parameters...
@@ -83,6 +87,35 @@ public class Array {
 //            System.out.println(sum); // if placed here, it will show each iteration calculation
         }
         System.out.println(sum); // placed here, displays only last iteration calculation
+        System.out.println();
+    }
+
+
+    // TODO: 1 March 2022 warmup--
+    //  Write a program that creates an array, and then prints the sum of the even and odd integers in a new array [sumOdd, sumEven]
+    // step 1: make method
+    // step 2: establish odd and even variable set to 0, and the array to calculate
+    // step 3: make for-loop for iterating array to calculate
+    // step 4: make if-statement for separating even and odd numbers in array
+    // step 5: add logic to sum even numbers stored in even variable, and odd numbers stored in odd variable
+    // step 6: make new array with variables holding the sums
+    // step 7: print new array to view result; use Arrays.toString() to see in human readable output
+    public static void numNums()
+    {
+        int odd = 0;
+        int even = 0;
+        int[] arrayToSum = {2,4,8,5,1,2};
+        for (int n: arrayToSum)
+        {
+            if (n % 2 == 0) {
+                even += n;
+            }
+            else {
+                odd += n;
+            }
+        }
+        int[] newN = {even, odd};
+        System.out.println(Arrays.toString(newN));
     }
 
 }
