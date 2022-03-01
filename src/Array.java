@@ -71,6 +71,23 @@ public class Array {
 //            System.out.println(sum);
 //        }
 
+        // TODO: MATRIX
+        int[][] myMatrix = {
+                {5, 7, 9},
+                {1, 5, 9},
+                {2, 2, 7}
+        };
+        System.out.println(Arrays.deepToString(myMatrix));
+
+        //print every nested element in matrix
+        for (int[] rows : myMatrix) {
+            System.out.println("-------new row----");
+            for (int column : rows) {
+                System.out.println(column);
+            }
+        }
+
+        System.out.println();
         nums(5, 7, 9); // calling the nums method to return results
         System.out.println(Arrays.toString(solution));
         numNums(arrayToSum);
@@ -124,5 +141,7 @@ public class Array {
         System.out.println(Arrays.toString(newN));
         return newN;
     }
+
+
 
 }
