@@ -1,6 +1,6 @@
 package interfaces_abstracts;
 
-public abstract class Employee {
+public abstract class Employee implements dailyWork, monthlyWork {
     // protected allows sub and super classes to access the field;
     protected String name;
     protected String department;
@@ -29,5 +29,5 @@ public abstract class Employee {
     }
 
     // method
-    public abstract String work();
+//    public abstract String work(); // no longer needed because this class implements dailyWork (see: line 3)
 }
