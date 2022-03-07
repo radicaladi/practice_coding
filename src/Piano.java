@@ -20,7 +20,7 @@ public class Piano extends MusicalInstrument implements Tuneable, VolumeAdjustab
     }
 
     @Override
-    public void stopMustic() {
+    public void stopMusic() {
         System.out.println("Piano play comes to an end...");
     }
 

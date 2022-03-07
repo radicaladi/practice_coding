@@ -12,4 +12,6 @@ public abstract class MusicalInstrument implements Playable {
     public void setInstrumentClassification(String instrumentClassification) {
         this.instrumentClassification = instrumentClassification;
     }
+
+    public abstract void stopMusic();
 }

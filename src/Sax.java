@@ -20,7 +20,7 @@ public class Sax extends MusicalInstrument implements Tuneable, VolumeAdjustable
     }
 
     @Override
-    public void stopMustic() {
+    public void stopMusic() {
         System.out.println("Sax play winds to an end...");
     }
 
@@ -43,4 +43,5 @@ public class Sax extends MusicalInstrument implements Tuneable, VolumeAdjustable
     public void volumeDown() {
         System.out.println("Sax noises lessens...");
     }
+
 }
