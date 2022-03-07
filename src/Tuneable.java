@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Tuneable {
+public interface Tuneable {
+    public void tuneInstrument();
+    public void detuneInstrument();
 }

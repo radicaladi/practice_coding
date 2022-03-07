@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface VolumeAdjustable {
+public interface VolumeAdjustable {
+    public void volumeUp();
+    public void volumeDown();
 }
