@@ -113,3 +113,16 @@ arrayToSort.sort(function (a, b) {
 
 console.log(arrayToSort)
 console.log("//////////")
+
+// Write a function to determine if a string input is palindrome
+
+function checkPalindrome(string) {
+    const strArr = string.split('');
+    const rvsdArr = strArr.reverse();
+    const rvsdStr = rvsdArr.join('');
+    if (string.toLowerCase() == rvsdStr.toLowerCase()) {
+        console.log("is a palindrome!");
+    } else { console.log("is not a palindrome!")}
+}
+
+checkPalindrome("bob")
