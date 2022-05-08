@@ -126,6 +126,7 @@ function checkPalindrome(string) {
 }
 
 checkPalindrome("bob")
+console.log("//////////")
 
 // Given two temperatures , return true if one is less than 0 and the other is greater than 100
 
@@ -134,6 +135,7 @@ function icyHot(temp1, temp2) {
 }
 
 console.log(icyHot(-2, 109))
+console.log("//////////")
 
 //Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back,
 // so "kitten" yields "kikittenki".
@@ -149,3 +151,12 @@ function front22(string) {
 }
 
 console.log(front22("kitten"))
+console.log("//////////")
+
+//Given three int values, a b c, return the largest.
+
+function intMax (a, b, c) {
+    return Math.max(a, b, c);
+}
+
+console.log(intMax(7, 8, 5));
