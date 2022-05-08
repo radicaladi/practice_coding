@@ -160,3 +160,15 @@ function intMax (a, b, c) {
 }
 
 console.log(intMax(7, 8, 5));
+console.log("//////////")
+
+//Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie.
+// Note that Math.abs(n) returns the absolute value of a number.
+
+function close10 (num1, num2) {
+    if (Math.abs(num1  - 10) < Math.abs(num2  - 10)) { return num1; }
+    else if (Math.abs(num1 -10) === Math.abs(num2 -10) ){ return 0; }
+    else return num2;
+}
+
+console.log(close10(3, 1))
