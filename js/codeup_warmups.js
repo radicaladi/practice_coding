@@ -185,3 +185,21 @@ function in3050 (a, b) {
 
 console.log(in3050(35, 32))
 console.log(in3050(12, 25))
+console.log("//////////")
+
+// Given a string, return a new string where the last 3 chars are now in upper case.
+// If the string has less than 3 chars, uppercase whatever is there.
+// Note that str.toUpperCase() returns the uppercase version of a string.
+
+function endUp (string) {
+    if (string.length <= 3) {return string.toUpperCase()};
+    const cut = string.length - 3;
+    const front = string.substring(0, cut);
+    const back = string.substring(cut);
+    return front + back.toUpperCase();
+}
+
+console.log(endUp("california"))
+console.log("//////////")
+
+
