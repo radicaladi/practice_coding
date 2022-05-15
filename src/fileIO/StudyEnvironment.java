@@ -112,3 +112,5 @@ public class StudyEnvironment {
     }
 
 }
+//List<String> test = List.of("Name: " + contact + " & Phone Number: " + newNumStr);
+//                            Files.write(textPath, test, StandardOpenOption.APPEND);
