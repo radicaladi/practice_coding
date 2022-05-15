@@ -5,14 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scroll Snap</title>
+    <title>scroll-snap</title>
     <style>
         * {
         box-sizing: border-box;
     }
     html {
         font-family: sans-serif;
-        scroll-snap-type: mandatory;
         scroll-snap-points-y: repeat(100vh);
         scroll-snap-type: y mandatory;
     }
@@ -36,20 +35,33 @@
     }</style>
 </head>
 <body>
-    <section>
-        <h1>Section One</h1>
-    </section>
-    <section>
-        <h1>Section Two</h1>
-    </section>
-    <section>
-        <h1>Section Three</h1>
-    </section>
-    <section>
-        <h1>Section Four</h1>
-    </section>
-    <section>
-        <h1>Section Five</h1>
-    </section>
+<section style="background-color: #2187e7">
+    <h1>Section One</h1>
+</section>
+<section style="background-color: #64278f ">
+    <h1>Section Two</h1>
+</section>
+<section style="background-color: #e7c621">
+    <h1>Section Three</h1>
+</section>
+<section style="background-color: #63e721">
+    <h1>Section Four</h1>
+</section>
+<section style="background-color: #000000">
+    <h1>Section Five</h1>
+</section>
+<script>
+    const gra = function(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    const init = function(){
+        let items = document.querySelectorAll('section');
+        for (let i = 0; i < items.length; i++){
+            items[i].style.background = randomColor({luminosity: 'light'});
+        }
+        cssScrollSnapPolyfill()
+    }
+    init();
+</script>
 </body>
 </html>
