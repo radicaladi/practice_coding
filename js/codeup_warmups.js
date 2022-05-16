@@ -214,3 +214,18 @@ function everyNth (string, number) {
 }
 
 console.log(everyNth("supercalifragilistic", 3))
+console.log("//////////")
+
+// Given an array of numbers, we'll say that a triple is a value appearing 3 times in a row in the array.
+// Return true if the array does not contain any triples.
+
+function noTriples(arr) {
+    for (let i = 0; i < (arr.length-2); i++) {
+        let first = arr[i];
+        if (arr[i+1] === first && arr[i+2]=== first) return false;
+    }
+    return true;
+}
+
+console.log(noTriples(numArr))
+console.log("//////////")
