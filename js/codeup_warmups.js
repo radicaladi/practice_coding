@@ -229,3 +229,19 @@ function noTriples(arr) {
 
 console.log(noTriples(numArr))
 console.log("//////////")
+
+//Given an array of ints, return the number of 9's in the array.
+let numArr2 = [2,3,5,8,3,1,2,9,3,2,7,8,2,4,7]
+
+
+function countNines(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 9) { count++; }
+    }
+    return count;
+}
+
+console.log(countNines(numArr))
+console.log(countNines(numArr2))
+console.log("//////////")
