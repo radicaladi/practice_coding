@@ -93,7 +93,7 @@ public class Array {
         numNums(arrayToSum);
     }
 
-    static int[] arrayToSum = {2,4,8,5,1,2};
+    static int[] arrayToSum = {2, 4, 8, 5, 1, 2};
 
     static int[] solution = numNums(arrayToSum);
 
@@ -103,8 +103,7 @@ public class Array {
 
     public static void nums(int indexEins, int indexZwei, int indexDrei) {
         nums = new int[]{indexEins, indexZwei, indexDrei};
-        for (int num: nums)
-        {
+        for (int num : nums) {
             sum += num;
 //            System.out.println(sum); // if placed here, it will show each iteration calculation
         }
@@ -124,16 +123,13 @@ public class Array {
     // step 7: print new array to view result; use Arrays.toString() to see in human readable output
     // refactor:
     // array now allows arguments to pass various arrays to the method and return calculations
-    public static int[] numNums(int[] ogArr)
-    {
+    public static int[] numNums(int[] ogArr) {
         int odd = 0;
         int even = 0;
-        for (int n: ogArr)
-        {
+        for (int n : ogArr) {
             if (n % 2 == 0) {
                 even += n;
-            }
-            else {
+            } else {
                 odd += n;
             }
         }
@@ -142,6 +138,77 @@ public class Array {
         return newN;
     }
 
+    public static boolean isBalanced(String s) {
+        int len = s.length();
+        if (len == 0 || s == null) return true;
+        Stack<Character> stack = new Stack<Character>();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{') stack.push(s.charAt(i));
+            else if (s.charAt(i) == ')' && !stack.empty() && stack.peek() == '(') stack.pop();
+            else if (s.charAt(i) == ']' && !stack.empty() && stack.peek() == '[') stack.pop();
 
+            else if (s.charAt(i) == '}' && !stack.empty() && stack.peek() == '{') stack.pop();
+            else return false;
+
+
+        }
+        return stack.empty();
+    }
+
+    /*
+    * import java.util.*;
+      import java.util.Scanner;
+
+        // Write your code here. DO NOT use an access modifier in your class declaration.
+
+        class Parser{
+            static boolean isBalanced(String s)
+            {
+                if (s == null || ((s.length() % 2) != 0)) {
+                    return false;
+                    }
+                else {
+                    char[] check = s.toCharArray();
+                    for (char a : check) {
+                        if (!(a == '{' || a == '['  || a == '(' || a == '}'  || a == ']' || a == ')' ))
+                        return false;
+                    }
+                }
+                while (s.contains("()") || s.contains("[]") || s.contains("{}")) {
+                    s = s.replaceAll("\\(\\)", "")
+                    .replaceAll("\\[\\]", "")
+                    .replaceAll("\\{\\}", "");
+                }
+                return (s.length() == 0);
+            }
+        }
+
+
+        class Solution {
+
+        	public static void main(String[] args) {
+        		Parser parser = new Parser();
+
+        		Scanner in = new Scanner(System.in);
+
+        		while (in.hasNext()) {
+        			System.out.println(parser.isBalanced(in.next()));
+        		}
+
+        		in.close();
+        	}
+        }
+    *
+    * */
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int a0 = 0; a0 < t; a0++) {
+            String expression = in.next();
+            System.out.println((isBalanced(expression)) ? "YES" : "NO");
+        }
+    }
+}
 
 }
