@@ -245,3 +245,23 @@ function countNines(arr) {
 console.log(countNines(numArr))
 console.log(countNines(numArr2))
 console.log("//////////")
+
+// Given a string, return a string made of the first 2 chars (if present),
+// however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+
+function startOz(string) {
+    let result = "";
+
+    if (string.length >= 1 && string.charAt(0)==='o') {
+        result = result + string.charAt(0);
+    }
+
+    if (string.length >= 2 && string.charAt(1)==='z') {
+        result = result + string.charAt(1);
+    }
+
+    return result;
+}
+
+console.log(startOz("ozymandias"))
+console.log("//////////")
