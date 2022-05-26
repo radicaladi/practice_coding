@@ -265,3 +265,19 @@ function startOz(string) {
 
 console.log(startOz("ozymandias"))
 console.log("//////////")
+
+// Given a string, return a new string where the first and last chars have been exchanged.
+
+function frontBack(string) {
+    const exchange = string.split(" ").map(word => {
+        const length = word.length;
+        if (length > 1) {
+            word = word[length-1] + word.substring(1, length-1) + word[0];
+        }
+        return word;
+    }).join(" ")
+    console.log(exchange)
+}
+
+frontBack("Until next time Honey");
+console.log("//////////")
