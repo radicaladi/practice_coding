@@ -299,3 +299,46 @@ function front3(string) {
 
 console.log(front3("hibernation"));
 console.log("//////////")
+
+// balanced bracket algorithm with JavaScript
+// balanced bracket structures are as follows: (), [](), {()}
+// this is not balanced  [{]}
+
+function balancedBrackets(expression) {
+    let stack = [];
+
+    for (let i = 0; i <= expression.length; i++) {
+        let x = expression[i];
+        if (x === '{' || x === '(' || x === '[') {
+            stack.push(x);
+        }
+        if (stack.length === 0)
+            return "is not balanced";
+
+        let check;
+        switch (x) {
+            case ')':
+                check = stack.pop();
+                if (check === '{' || check === '[')
+                    return false;
+                break;
+            case '}':
+                check = stack.pop();
+                if (check === '(' || check === '[')
+                    return false;
+                break;
+            case ']':
+                check = stack.pop();
+                if (check === '{' || check === '(')
+                    return false;
+                break;
+        }
+    }
+    return (stack.length === 0);
+}
+
+let expression = "({[}])"
+    if (balancedBrackets(expression)) {
+        console.log("is balanced")}
+    else console.log("is not balanced");
+console.log("//////////")
