@@ -342,3 +342,20 @@ let expression = "({[}])"
         console.log("is balanced")}
     else console.log("is not balanced");
 console.log("//////////")
+
+// Given a string, return true if the string starts with "hi" and false otherwise.
+// WIP
+
+function startHi(string) {
+    if (string.length < 2) {
+        return false;
+    }
+    let firstTwo = string.substring(0, 2);
+    if (firstTwo === "hi") {
+        return true;
+    }
+    else { return false;}
+}
+
+console.log(startHi("Hiatchi"));
+console.log("//////////")
