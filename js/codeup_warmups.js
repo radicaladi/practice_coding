@@ -351,11 +351,9 @@ function startHi(string) {
         return false;
     }
     let firstTwo = string.substring(0, 2);
-    if (firstTwo === "hi") {
-        return true;
-    }
-    else { return false;}
+    return firstTwo.toLowerCase() === "hi";
 }
 
 console.log(startHi("Hiatchi"));
+console.log(startHi("Itachi"))
 console.log("//////////")
