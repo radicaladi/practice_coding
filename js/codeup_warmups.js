@@ -344,7 +344,6 @@ let expression = "({[}])"
 console.log("//////////")
 
 // Given a string, return true if the string starts with "hi" and false otherwise.
-// WIP
 
 function startHi(string) {
     if (string.length < 2) {
