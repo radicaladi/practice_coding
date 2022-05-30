@@ -298,6 +298,7 @@ function front3(string) {
 }
 
 console.log(front3("hibernation"));
+console.log(front3("abc"));
 console.log("//////////")
 
 // balanced bracket algorithm with JavaScript
@@ -355,4 +356,16 @@ function startHi(string) {
 
 console.log(startHi("Hiatchi"));
 console.log(startHi("Itachi"))
+console.log("//////////")
+
+// Given a string, take the last char and return a new string with the last char added at the front and back,
+// so "cat" yields "tcatt".
+// The original string will be length 1 or more.
+
+function backAround(string) {
+    let end = string.charAt(string.length-1);
+    return end + string + end;
+}
+
+console.log(backAround("luke"));
 console.log("//////////")
