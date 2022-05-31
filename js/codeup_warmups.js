@@ -379,3 +379,13 @@ function or35 (n) {
 console.log(or35(70));
 console.log(or35(1));
 console.log("//////////");
+
+// Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+
+function in1020 (x, y) {
+    return (x >= 10 && x <= 20) || (y >= 10 && y<= 20);
+}
+
+console.log(in1020(8, 99));
+console.log(in1020(12, 15));
+console.log("//////////");
