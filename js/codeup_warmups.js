@@ -389,3 +389,14 @@ function in1020 (x, y) {
 console.log(in1020(8, 99));
 console.log(in1020(12, 15));
 console.log("//////////");
+
+// Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+
+function mixStart(str) {
+    if (str.length < 3) return false;
+    let pair = str.substring(1,3);
+    if (pair === "ix") return true;
+}
+
+console.log(mixStart("tix"));
+console.log("//////////");
