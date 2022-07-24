@@ -400,3 +400,18 @@ function mixStart(str) {
 
 console.log(mixStart("tix"));
 console.log("//////////");
+
+// Return true if the given string contains between 1 and 3 'e' chars.
+
+function stringE(string) {
+    let counter = 0;
+
+    for ( let i = 0; i < string.length; i++) {
+        if(string.charAt(i) === "e") counter++;
+    }
+    return (counter >= 1 && counter <= 3)
+}
+
+console.log(stringE("elements"));
+console.log(stringE("peacekeeper"))
+console.log("//////////");
