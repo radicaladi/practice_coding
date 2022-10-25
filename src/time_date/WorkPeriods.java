@@ -1,9 +1,12 @@
 package time_date;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
+import java.util.*;
+import java.util.stream.Stream;
+
+import static java.time.DayOfWeek.SATURDAY;
+import static java.time.DayOfWeek.SUNDAY;
+import static java.util.stream.Collectors.toList;
 
 public class WorkPeriods {
     // static utility methods of WorkPeriod
@@ -17,4 +20,12 @@ public class WorkPeriods {
         return WorkPeriod.of(startDateTime, endDateTime);
     }
 
+    public static List<WorkPeriod> generateWorkingPeriods(LocalDate startDate, int dayCount) {
+        List<LocalDate> workingDays = generateWorkingDays(startDate, dayCount);
+        //generate morning and afternoon work periods for each day in workingDays
+    }
+
+    private static List<LocalDate> generateWorkingDays(LocalDate startDate, int dayCount) {
+        return null;
+    }
 }
