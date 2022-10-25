@@ -8,27 +8,13 @@ import java.time.LocalTime;
 public class WorkPeriods {
     // static utility methods of WorkPeriod
 
-    public static WorkPeriod createFirstWorkPeriod() {
-        LocalDateTime startDateTime;
-        // alternative ways of creating a LocalDateTime
-        startDateTime = LocalDateTime.of(1970,1,5,9,0);
-        LocalDate startDate = LocalDate.of(1970,1,5);
-        LocalTime startTime = LocalTime.of(9,5);
-        startDateTime = LocalDateTime.of(startDate,startTime);
+    public static final LocalTime AM_START_TIME = LocalTime.of(9,5);
+    public static final Duration WORK_PERIOD_LENGTH = Duration.ofHours(3).plusMinutes(30);
 
-        Duration morningLength;
-        // alternative ways of creating a Duration
-        morningLength = Duration.ofHours(3).plusMinutes(30);
-        morningLength = Duration.ofMinutes(210);
-
-        LocalDateTime endDateTime;
-        // alternative ways of creating a LocalDateTime
-        endDateTime = startDateTime.with(LocalTime.of(12,30));
-        endDateTime = startDateTime.plus(morningLength);
-
-        // workperiod factory method
-        WorkPeriod wp = WorkPeriod.of(startDateTime, endDateTime);
-        return wp;
+    public static WorkPeriod createMorningWorkPeriod(LocalDate date) {
+        LocalDateTime startDateTime = LocalDateTime.of(date, AM_START_TIME);
+        LocalDateTime endDateTime  = startDateTime.plus(WORK_PERIOD_LENGTH);
+        return WorkPeriod.of(startDateTime, endDateTime);
     }
 
 }
