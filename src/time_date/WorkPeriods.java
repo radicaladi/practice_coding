@@ -43,11 +43,14 @@ public class WorkPeriods {
     }
 
     private static List<LocalDate> generateWorkingDays(LocalDate startDate, int dayCount) {
-       return Stream.iterate(startDate, d -> d.plusDays(1))
-                .filter(WorkPeriods::isWorkingDay)
-                .limit(dayCount)
-                .collect(toList());
+       return Stream.iterate(startDate, d -> d.with(nextWorkingDayAdjuster))
+               .limit(dayCount)
+               .collect(toList());
     }
+
+    private final static TemporalAdjuster nextWorkingDayAdjuster =
+            d -> DayOfWeek.from(d)!= FRIDAY ? d.plus(1, DAYS)
+                    : d.with(TemporalAdjusters.next(MONDAY));
 
     private static boolean isWorkingDay(LocalDate d) {
         DayOfWeek dayOfWeek = d.getDayOfWeek();
