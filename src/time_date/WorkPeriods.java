@@ -20,12 +20,28 @@ public class WorkPeriods {
         return WorkPeriod.of(startDateTime, endDateTime);
     }
 
+    public static WorkPeriod createAfternoonWorkPeriod(LocalDate date) {
+        LocalDateTime startDateTime = LocalDateTime.of(date, PM_START_TIME);
+        LocalDateTime endDateTime  = startDateTime.plus(WORK_PERIOD_LENGTH);
+        return WorkPeriod.of(startDateTime, endDateTime);
+    }
+
     public static List<WorkPeriod> generateWorkingPeriods(LocalDate startDate, int dayCount) {
         List<LocalDate> workingDays = generateWorkingDays(startDate, dayCount);
         //generate morning and afternoon work periods for each day in workingDays
     }
 
     private static List<LocalDate> generateWorkingDays(LocalDate startDate, int dayCount) {
-        return null;
+       return Stream.iterate(startDate, d -> d.plusDays(d))
+                .filter(d -> isWorkingDay(d))
+                .limit(dayCount)
+                .collect(toList());
     }
+
+    private static boolean isWorkingDay(LocalDate d) {
+        DayOfWeek dayOfWeek = d.getDayOfWeek();
+        return ! (dayOfWeek == SATURDAY || dayOfWeek == SUNDAY);
+    }
+
+
 }
