@@ -1,17 +1,22 @@
 package time_date;
 
 import java.time.*;
+import java.time.temporal.Temporal;
+import java.time.temporal.TemporalAccessor;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.stream.Stream;
 
-import static java.time.DayOfWeek.SATURDAY;
-import static java.time.DayOfWeek.SUNDAY;
+import static java.time.DayOfWeek.*;
+import static java.time.temporal.ChronoUnit.DAYS;
 import static java.util.stream.Collectors.toList;
 
 public class WorkPeriods {
     // static utility methods of WorkPeriod
 
     public static final LocalTime AM_START_TIME = LocalTime.of(9,5);
+    public static final LocalTime PM_START_TIME = LocalTime.of(9,5);
     public static final Duration WORK_PERIOD_LENGTH = Duration.ofHours(3).plusMinutes(30);
 
     public static WorkPeriod createMorningWorkPeriod(LocalDate date) {
@@ -31,7 +36,6 @@ public class WorkPeriods {
         return generateWorkingPeriods(workingDays);
     }
 
-    // creates new stream for each element and flattens that stream into my stream using flatmap
     private static List<WorkPeriod> generateWorkingPeriods(List<LocalDate> workingDays) {
         return workingDays.stream()
                 .flatMap(d -> Stream.of(createMorningWorkPeriod(d), createAfternoonWorkPeriod(d)))
@@ -39,8 +43,8 @@ public class WorkPeriods {
     }
 
     private static List<LocalDate> generateWorkingDays(LocalDate startDate, int dayCount) {
-       return Stream.iterate(startDate, d -> d.plusDays(d))
-                .filter(d -> isWorkingDay(d))
+       return Stream.iterate(startDate, d -> d.plusDays(1))
+                .filter(WorkPeriods::isWorkingDay)
                 .limit(dayCount)
                 .collect(toList());
     }
@@ -50,5 +54,10 @@ public class WorkPeriods {
         return ! (dayOfWeek == SATURDAY || dayOfWeek == SUNDAY);
     }
 
+    public static void main(String[] args) {
+        // mock unit test, generates 3 days of work periods, starting at epoch and printing each
+        List<WorkPeriod> workPeriods = generateWorkingPeriods(LocalDate.ofEpochDay(0), 3);
+        workPeriods.forEach(System.out::println);
+    }
 
 }
