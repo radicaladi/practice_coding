@@ -28,7 +28,14 @@ public class WorkPeriods {
 
     public static List<WorkPeriod> generateWorkingPeriods(LocalDate startDate, int dayCount) {
         List<LocalDate> workingDays = generateWorkingDays(startDate, dayCount);
-        //generate morning and afternoon work periods for each day in workingDays
+        return generateWorkingPeriods(workingDays);
+    }
+
+    // creates new stream for each element and flattens that stream into my stream using flatmap
+    private static List<WorkPeriod> generateWorkingPeriods(List<LocalDate> workingDays) {
+        return workingDays.stream()
+                .flatMap(d -> Stream.of(createMorningWorkPeriod(d), createAfternoonWorkPeriod(d)))
+                .collect(toList());
     }
 
     private static List<LocalDate> generateWorkingDays(LocalDate startDate, int dayCount) {
